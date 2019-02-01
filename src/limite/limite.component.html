@@ -1,0 +1,21 @@
+<h3>Limites</h3>
+
+<a [routerLink]="['/limite/new']" class="btn btn-primary">Novo</a>
+
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th>#</th>
+    <th>Título</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let limite of limites">
+    <td>{{ limite.nomeCliente }}</td>
+    <td>{{ limite.limiteCredito }}</td>
+    <td>{{ limite.risco }}</td>
+    
+  </tr>
+  </tbody>
+</table>

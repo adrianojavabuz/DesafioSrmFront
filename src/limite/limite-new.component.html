@@ -1,0 +1,30 @@
+<h3>Cadastro de crédito</h3>
+
+<div class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><a [routerLink]="['/limite']">voltar</a></li>
+    </ul>
+  </div>
+</div>
+<form action="" class="form-horizontal" autocomplete="off" (submit)="save()">
+  <div class="form-group"><label for="nomeCliente" class="form-label col-md-2">Nome Cliente</label>
+    <div class="col-md-10"><input name="nomeCliente" [(ngModel)]="limite.nomeCliente" type="text" class="form-control"></div>
+  </div>
+  <div class="form-group"><label for="limiteCredito" class="form-label col-md-2">Limite de Crédito</label>
+    <div class="col-md-10"><input name="limiteCredito" [(ngModel)]="limite.limiteCredito" type="text" class="form-control"></div>
+  </div>
+  <div class="form-group"><label for="risco" class="form-label col-md-2">Risco</label>
+    <div class="col-md-10">
+        <select  class="form-control" [(ngModel)]="limite.risco">
+            
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            
+          </select>
+  </div>
+  <div class="form-group">
+    <div class="col-md-10 col-md-push-2"><input type="submit" class="btn btn-primary"></div>
+  </div>
+</form>
